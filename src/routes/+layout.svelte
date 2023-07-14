@@ -5,7 +5,7 @@
 	import "../app.css";
 </script>
 
-<Head />
+<Head description="{$t('slogan')} {$t('description')}" />
 
 <Drawer title={$t("watermark-app")}>
 	<svelte:fragment slot="menu">

@@ -102,9 +102,9 @@
 		</div>
 	{:else}
 		<div
-			class="h-full w-full flex flex-col-reverse md:flex-row justify-around items-center p-4"
+			class="max-h-full md:h-full w-full flex flex-col-reverse md:flex-row justify-around items-center p-4 max-md:overflow-auto"
 		>
-			<div class="carousel carousel-vertical flex-1 md:h-full p-2 gap-2">
+			<div class="carousel md:carousel-vertical md:flex-1 h-full p-2 gap-2">
 				{#each Array.from(images) as image, i}
 					<div
 						class="carousel-item w-full h-full border rounded-xl overflow-hidden flex justify-center items-center"
@@ -133,7 +133,7 @@
 					</div>
 				{/each}
 			</div>
-			<div class="flex-1">
+			<div class="md:flex-1">
 				<div class="prose">
 					<h2>
 						{$t("step-2")}

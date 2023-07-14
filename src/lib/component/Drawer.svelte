@@ -32,7 +32,7 @@
 	</div>
 	<div class="drawer-side z-10">
 		<label for="drawer-{id}" class="drawer-overlay" />
-		<ul class="menu h-full w-80 gap-2 bg-base-200 p-4">
+		<ul class="menu h-full w-80 gap-2 bg-base-200 p-4 !duration-200">
 			<slot name="menu" />
 		</ul>
 	</div>
