@@ -14,7 +14,8 @@
 		"test:unit": "vitest",
 		"lint": "prettier --ignore-path .gitignore --check **/*.{ts,js,json,yaml,yml,svelte,html,css} && eslint .",
 		"format": "prettier --ignore-path .gitignore --write **/*.{ts,js,json,yaml,yml,svelte,html,css}",
-		"changeset": "changeset"
+		"changeset": "changeset",
+		"gen-pwa-assets": "pwa-assets-generator --preset minimal static/icon.1024.png"
 	},
 	"devDependencies": {
 		"@changesets/changelog-github": "^0.4.8",
@@ -28,6 +29,7 @@
 		"@trivago/prettier-plugin-sort-imports": "^4.1.1",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
+		"@vite-pwa/assets-generator": "^0.0.3",
 		"@vite-pwa/sveltekit": "^0.2.5",
 		"autoprefixer": "^10.4.14",
 		"daisyui": "^3.2.1",
@@ -48,7 +50,9 @@
 		"tslib": "^2.6.0",
 		"typescript": "^5.1.6",
 		"vite": "^4.4.3",
-		"vitest": "^0.33.0"
+		"vite-plugin-pwa": "^0.16.4",
+		"vitest": "^0.33.0",
+		"workbox-window": "^7.0.0"
 	},
 	"lint-staged": {
 		"*.{ts,js,json,yaml,yml,svelte,html,css}": [

@@ -12,6 +12,9 @@ const config = {
 		alias: {
 			"$i18n/*": "./locales/*",
 		},
+		serviceWorker: {
+			register: false,
+		},
 	},
 };
 

@@ -3,7 +3,7 @@
 
 	export let title = "";
 	export let description = "A simple app to add watermarks to images.";
-	export let image = `${$page.url.origin}/banner.jpg`;
+	export let image = `https://watermark-app.pages.dev/banner.jpg`;
 
 	function ellipsis(str: string, len: number) {
 		if (str.length <= len) {
