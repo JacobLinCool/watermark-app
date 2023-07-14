@@ -1,0 +1,18 @@
+{
+	"default-watermark": "Only for testing purposes!",
+	"description": "All operations are done in your browser and the data never leaves your device. You can also customize the size and transparency of the watermark.",
+	"done": "Done",
+	"download-all": "Download All",
+	"luminosity": "Watermark Luminosity",
+	"opacity": "Watermark Opacity",
+	"size": "Watermark Size",
+	"slogan": "Quickly and securely add watermark to your images.",
+	"start": "Start",
+	"step-1": "Step 1. Select images to add watermark",
+	"step-2": "Step 2. Configure watermark settings",
+	"step-3": "Step 3. Save your images",
+	"text": "Watermark Text",
+	"upload": "Select Images",
+	"watermark-app": "Watermark App",
+	"welcome": "Welcome to Watermark App"
+}

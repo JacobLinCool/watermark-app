@@ -1,0 +1,18 @@
+{
+	"default-watermark": "僅供用於測試目的！",
+	"description": "所有操作皆在您的瀏覽器中完成，資料不會離開您的裝置。您也可以自訂浮水印的大小與透明度。",
+	"done": "完成",
+	"download-all": "全部下載",
+	"luminosity": "浮水印亮度",
+	"opacity": "浮水印不透明度",
+	"size": "浮水印尺寸",
+	"slogan": "快速、安全地為您的影像加上浮水印。",
+	"start": "開始使用",
+	"step-1": "第一步、選擇要添加浮水印的影像",
+	"step-2": "第二步、調整浮水印設定",
+	"step-3": "第三步、保存影像",
+	"text": "浮水印文字",
+	"upload": "選擇影像",
+	"watermark-app": "Watermark App",
+	"welcome": "歡迎使用 Watermark App"
+}
