@@ -24,3 +24,7 @@ importOrder:
     - "^[^@.]"
     - "^@"
     - "^\\."
+
+importOrderParserPlugins:
+    - "typescript"
+    - "importAssertions"
