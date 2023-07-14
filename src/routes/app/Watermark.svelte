@@ -9,8 +9,20 @@
 	export let opacity: number;
 	export let luminosity: number;
 
-	export function png() {
-		return canvas.toDataURL("image/png");
+	export function blob() {
+		return new Promise<Blob>((resolve, reject) => {
+			canvas.toBlob((blob) => {
+				if (blob) {
+					resolve(blob);
+				} else {
+					reject(new Error("Failed to create blob"));
+				}
+			}, "image/png");
+		});
+	}
+
+	export async function png() {
+		return URL.createObjectURL(await blob());
 	}
 
 	let canvas: HTMLCanvasElement;

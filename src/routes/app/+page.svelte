@@ -48,7 +48,7 @@
 		downloading = true;
 
 		const a = document.createElement("a");
-		a.href = editors[idx].png();
+		a.href = await editors[idx].png();
 		a.target = "_blank";
 		a.download = `watermarked-${images[idx].name}`;
 		a.click();
@@ -70,9 +70,7 @@
 		const JSZip = (await import("jszip")).default;
 		const zip = new JSZip();
 		for (let i = 0; i < editors.length; i++) {
-			zip.file(`watermarked-${images[i].name}`, editors[i].png().split(",")[1], {
-				base64: true,
-			});
+			zip.file(`watermarked-${images[i].name}`, editors[i].blob(), { binary: true });
 		}
 
 		const blob = await zip.generateAsync({ type: "blob" });
