@@ -50,7 +50,7 @@
 		const a = document.createElement("a");
 		a.href = await editors[idx].png();
 		a.target = "_blank";
-		a.download = `watermarked-${images[idx].name}`;
+		a.download = watermarked_name(images[idx].name);
 		a.click();
 		a.remove();
 
@@ -70,7 +70,7 @@
 		const JSZip = (await import("jszip")).default;
 		const zip = new JSZip();
 		for (let i = 0; i < editors.length; i++) {
-			zip.file(`watermarked-${images[i].name}`, editors[i].blob(), { binary: true });
+			zip.file(watermarked_name(images[i].name), editors[i].blob(), { binary: true });
 		}
 
 		const blob = await zip.generateAsync({ type: "blob" });
@@ -82,6 +82,17 @@
 		a.remove();
 
 		downloading = false;
+	}
+
+	function watermarked_name(original: string) {
+		// remove extension
+		const ext = original.lastIndexOf(".");
+		if (ext !== -1) {
+			original = original.substring(0, ext);
+		}
+
+		// add suffix
+		return `${original}-watermarked.png`;
 	}
 </script>
 
@@ -177,14 +188,16 @@
 							class="range range-bordered w-full"
 							type="range"
 							bind:value={buffer_luminosity}
-							min="1"
+							min="0"
 							max="100"
 						/>
 					</div>
 
-					<br />
-
-					<button class="btn btn-primary" on:click={download_all} disabled={downloading}>
+					<button
+						class="btn btn-primary my-4"
+						on:click={download_all}
+						disabled={downloading}
+					>
 						{$t("download-all")}
 					</button>
 				</div>

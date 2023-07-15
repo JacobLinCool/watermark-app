@@ -9,7 +9,7 @@ test("test", async ({ page }) => {
 	const downloadPromise = page.waitForEvent("download");
 	await page.locator("span").getByRole("button").click();
 	const download = await downloadPromise;
-	expect(download.suggestedFilename()).toBe("watermarked-favicon.png");
+	expect(download.suggestedFilename()).toBe("favicon-watermarked.png");
 	const download1Promise = page.waitForEvent("download");
 	await page.getByRole("button", { name: t["download-all"] }).click();
 	const download1 = await download1Promise;
