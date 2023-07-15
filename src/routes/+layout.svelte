@@ -40,7 +40,10 @@
 <Drawer title={$t("watermark-app")}>
 	<svelte:fragment slot="menu">
 		<li>
-			<a href="/app">App</a>
+			<a href="/app"> App </a>
+		</li>
+		<li>
+			<a href="https://github.com/JacobLinCool/watermark-app" target="_blank"> GitHub </a>
 		</li>
 	</svelte:fragment>
 	<div class="h-full w-full p-2" slot="body">
