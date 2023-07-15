@@ -11,6 +11,7 @@
 	let size = 30;
 	let opacity = 30;
 	let luminosity = 70;
+	let repeat = false;
 
 	let editors: Watermark[] = [];
 
@@ -19,6 +20,7 @@
 	let buffer_size = size;
 	let buffer_opacity = opacity;
 	let buffer_luminosity = luminosity;
+	let buffer_repeat = repeat;
 	let buffer_timer: number | null = null;
 	$: {
 		if (browser) {
@@ -31,6 +33,7 @@
 				size = buffer_size;
 				opacity = buffer_opacity;
 				luminosity = buffer_luminosity;
+				repeat = buffer_repeat;
 			}, buffer_timeout);
 		}
 	}
@@ -126,6 +129,7 @@
 							{size}
 							{opacity}
 							{luminosity}
+							{repeat}
 							bind:this={editors[i]}
 						/>
 						<span
@@ -190,6 +194,15 @@
 							bind:value={buffer_luminosity}
 							min="0"
 							max="100"
+						/>
+					</div>
+
+					<div>
+						<label class="label" for="">{$t("repeat")}</label>
+						<input
+							class="checkbox checkbox-bordered"
+							type="checkbox"
+							bind:checked={buffer_repeat}
 						/>
 					</div>
 

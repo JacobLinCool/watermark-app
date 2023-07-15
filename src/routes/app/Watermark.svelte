@@ -8,6 +8,7 @@
 	export let size: number;
 	export let opacity: number;
 	export let luminosity: number;
+	export let repeat: boolean;
 
 	export function blob() {
 		return new Promise<Blob>((resolve, reject) => {
@@ -60,15 +61,17 @@
 			ctx.font = size + "px Arial";
 			ctx.fillStyle = `rgba(128, 128, 128, ${opacity / 100})`;
 
+			const t = repeat ? text.repeat(20) : text;
+
 			const lines = img.height / (size * 1.5);
-			const width = ctx.measureText(text).width;
+			const width = ctx.measureText(t).width;
 			const x_step = (img.width - width) / lines;
 			const y_step = size * 1.5;
 
 			for (let i = 0; i < lines + 1; i++) {
 				const [r, g, b] = hsl2rgb((i * 360) / lines, 100, luminosity);
 				ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${opacity / 100})`;
-				ctx.fillText(text, i * x_step, i * y_step);
+				ctx.fillText(t, i * x_step, i * y_step);
 			}
 		}
 	}
