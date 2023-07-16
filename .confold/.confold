@@ -11,3 +11,6 @@ svelte.config.js
 tailwind.config.cjs
 tsconfig.json
 vite.config.ts
+
+.vscode
+.husky
