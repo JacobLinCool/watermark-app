@@ -8,3 +8,15 @@ node_modules
 !.env.example
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# managed by confold
+/.eslintignore
+/.eslintrc.cjs
+/.npmrc
+/.prettierrc.yml
+/playwright.config.ts
+/postcss.config.cjs
+/svelte.config.js
+/tailwind.config.cjs
+/tsconfig.json
+/vite.config.ts
